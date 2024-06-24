@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+namespace FortuneTellerGUI
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+public static void DisplayFortune(string first, string second)
+{
+MessageBox.Show(String.Format ("Your fortune:\n\n{0}\n\n{1}", first, second),"Fortune
+Prediction",MessageBoxButtons.OK,MessageBoxIcon.Information);
+}
+private void btnShow_Click(object sender, EventArgs e)
+{
+string[] fortunes = {"I see a tall, dark stranger in your future.",
+"There will be some money coming your way.",
+"Happiness is just around the corner.",
+"You will travel to faraway lands.",
+"A younger person is about to make a big difference in your life.",
+"The number 3 is very significant for you."};
+Random RandomClass = new Random();
+int ran1, ran2;
+ran1 = RandomClass.Next(0, fortunes.Length);
+ran2 = ran1;
+while (ran2 == ran1)
+ran2 = RandomClass.Next(0, fortunes.Length);
+DisplayFortune(fortunes[ran1], fortunes[ran2]);
+}
+}
+}
