@@ -1,0 +1,102 @@
+using System;
+using static System.Console;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Ranges
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[] marks = { 0, 40, 50, 60, 70, 75 };
+char[] grades = { ’F’, ’E’, ’D’, ’C’, ’B’, ’A’ };
+WriteLine("Enter your programming 3A test mark");
+int mark = Convert.ToInt32(ReadLine());
+int size = marks.Length - 1;
+int x = size;
+while (x >= 0 && mark < marks[x])
+--x;
+char grade = grades[x];
+WriteLine("Based on your test mark of {0}, your grade is {1}", mark, grade);
+ReadKey();
+}
+}
+}
+=======================================================================================================================================================================
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+namespace FortuneTellerGUI
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+public static void DisplayFortune(string first, string second)
+{
+MessageBox.Show(String.Format ("Your fortune:\n\n{0}\n\n{1}", first, second),"Fortune
+Prediction",MessageBoxButtons.OK,MessageBoxIcon.Information);
+}
+private void btnShow_Click(object sender, EventArgs e)
+{
+string[] fortunes = {"I see a tall, dark stranger in your future.",
+"There will be some money coming your way.",
+"Happiness is just around the corner.",
+"You will travel to faraway lands.",
+"A younger person is about to make a big difference in your life.",
+"The number 3 is very significant for you."};
+Random RandomClass = new Random();
+int ran1, ran2;
+ran1 = RandomClass.Next(0, fortunes.Length);
+ran2 = ran1;
+while (ran2 == ran1)
+ran2 = RandomClass.Next(0, fortunes.Length);
+DisplayFortune(fortunes[ran1], fortunes[ran2]);
+}
+}
+}
+==============================================================================================================================================================
+
+
+
+
+
+using System;
+using static System.Console;
+public class FlexibleArrayMethod
+{
+static void Main()
+{
+int[] array1 = { 3, 4, 5 };
+int[] array2 = { 33, 44, 55, 66, 77 };
+int[] array3 = { 333, 444, 555, 666, 777, 888, 999 };
+DisplayAndSum(array1);
+DisplayAndSum(array2);
+DisplayAndSum(array3);
+ReadKey();
+}
+public static void DisplayAndSum(int[] arr)
+{
+int total = 0;
+for (int x = 0; x < arr.Length; ++x)
+{
+Write("{0} ", arr[x]);
+total += arr[x];
+}
+WriteLine("\nTotal is {0}\n--------------\n", total);
+}
+}
