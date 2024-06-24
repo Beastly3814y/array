@@ -1,0 +1,26 @@
+using System;
+using static System.Console;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Ranges
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[] marks = { 0, 40, 50, 60, 70, 75 };
+char[] grades = { ’F’, ’E’, ’D’, ’C’, ’B’, ’A’ };
+WriteLine("Enter your programming 3A test mark");
+int mark = Convert.ToInt32(ReadLine());
+int size = marks.Length - 1;
+int x = size;
+while (x >= 0 && mark < marks[x])
+--x;
+char grade = grades[x];
+WriteLine("Based on your test mark of {0}, your grade is {1}", mark, grade);
+ReadKey();
+}
+}
+}
