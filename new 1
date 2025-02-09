@@ -1,0 +1,22 @@
+Inheritance in C# allows a child class to inherit and reuse a parent class’s properties and methods.
+Polymorphism in C# allows a single method or object to take many different forms and behave differently.
+Encapsulation in C# is the practice of keeping an object's details hidden and only allowing access through specific methods.
+Abstraction in C# means hiding the complex details and only showing the necessary parts.
+A base class in C# is a parent class that provides methods and attributes that can be inherited and reused by derived (child) classes.
+A derived class is a child class that gets features from a parent class and can have its own extra features.
+
+Method overloading is when a class has multiple methods with the same name but different inputs.
+
+Method overriding is when a child class changes the behavior of a method it inherits from a parent class.
+Exception handling is a way to catch and fix errors in a program so it doesn’t crash.
+A try block is used to write code that might cause an error, so the program can handle it safely.
+A catch block is used to handle errors that occur in the try block and specify what to do if an error happens.
+A finally block is used to write code that will run whether or not an error occurs, usually for cleanup tasks like closing files.
+Ref parameters allow a method to modify the value of a variable passed to it, and the change is reflected outside the method.
+Out parameters are similar to ref parameters, but they are used to return a value from a method, and the variable must be assigned inside the method.
+Static methods are methods that belong to the class and can be used without making an object of that class.
+Virtual methods are methods in a base class that can be changed or overridden in a derived class.
+An abstract class is a class that can't be used to create objects directly and is meant to be inherited by other classes.
+A sealed class is a class that can't be inherited or extended by any other class.
+Constructors are special methods that are called when an object is created, used to initialize the object’s properties.
+Destructors are methods that clean up when an object is no longer needed.
