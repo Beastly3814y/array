@@ -1,0 +1,18 @@
+ A parameter array (params array) allows a method to accept a variable number of arguments. It enables passing multiple values of the same type as a single array parameter.
+ A reference parameter allows a method to modify the value of an argument by passing its reference rather than a copy.
+ Mandatory parameters must be provided when calling a method. They do not have default values and are necessary for the function to execute correctly.
+Method overloading allows multiple methods with the same name but different parameter lists. 
+An optional parameter has a default value and can be omitted when calling a method.
+File-Processing Classes in .NET. 
+•	StreamReader: Reads characters from a stream.
+•	StreamWriter: Writes characters to a stream.
+•	FileStream: Handles file reading and writing at the byte level.
+•	BinaryReader: Reads binary data from a stream.
+•	BinaryWriter: Writes binary data to a stream.
+
+5 OOP Features/Concepts.
+1.	Encapsulation: Wrapping data and methods into a single unit (class).
+2.	Inheritance: Creating a new class from an existing class.
+3.	Polymorphism: Methods behaving differently based on input (overloading & overriding).
+4.	Abstraction: Hiding complex implementation details.
+5.	Classes & Objects: Core concepts of OOP.
