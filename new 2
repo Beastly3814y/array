@@ -1,0 +1,248 @@
+console
+
+Prg 1
+using System;
+using System.Collections.Generic;
+using System.Linq; using
+System.Text; using
+System.Threading.Tasks;
+namespace PissaStore
+{
+class Program
+{
+static void Main(string[] args)
+{
+//creation of pissa class object given a name p
+Pissa p = new Pissa();//instatiation of Pissa class
+Console.WriteLine("welcome to Pizza Store:");
+Console.WriteLine("Enter pizza diameter:");
+p.Diameter = Convert.ToInt32(Console.ReadLine()) ;
+Console.WriteLine("Enter pizza topping:");
+p.Topping = Console.ReadLine();
+Console.WriteLine("Enter pizza price:");
+p.Price = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine();
+Console.WriteLine("\tYour pizza order:");
+Console.Write("Size:"+ p.Diameter*2 +"\nTopping:"+ p.Topping
++"\nPrice:"+ p.Price.ToString("c"));
+Console.ReadLine();
+}
+}
+}
+using System;
+using System.Collections.Generic;
+using System.Linq; using
+System.Text; using
+System.Threading.Tasks;
+namespace
+PissaStore
+{
+class Pissa
+{
+private string topping;
+private int diameter;
+private double price;
+public string Topping
+{
+get{ return topping; }
+set { topping = value; }
+}
+public int Diameter
+{
+get { return diameter; }
+set { diameter = value; }
+}
+public double Price
+{
+get { return price; }
+set { price = value; }
+}
+}
+}
+
+
+
+
+
+
+
+Prg 2
+using System;
+using System.Collections.Generic;
+using System.Linq; using
+System.Text;
+using System.Threading.Tasks;
+namespace Inheritance
+{
+class Program
+{
+static void Main(string[] args)
+{
+Lion l = new Lion();
+Console.WriteLine(l.Run());
+Console.WriteLine(l.Speak());
+Console.ReadLine();
+}
+}
+}
+
+using System.Collections.Generic;
+using System.Linq; using
+System.Text;
+using System.Threading.Tasks;
+namespace Inheritance
+{
+abstract class Animal
+{
+public abstract String Speak();
+}
+}
+using System;
+using System.Collections.Generic;
+using System.Linq; using
+System.Text;
+using System.Threading.Tasks;
+namespace Inheritance
+{
+class Lion:Animal,ILion
+{
+public override string Speak()
+{
+return "roooaaar";
+}
+public string Run()
+{
+return "I am a Lion and I can’t run fast!";
+}
+}
+}
+using System;
+using System.Collections.Generic;
+using System.Linq; using
+System.Text;
+using System.Threading.Tasks;
+namespace Inheritance
+{
+public interface ILion
+{
+string Run();
+}
+}
+
+
+
+
+Prg  3
+namespace ConsoleApplication1
+{
+class Animal 
+{
+protected String name;
+protected int age;
+protected String color;
+public Animal(String n, String c, int h) 
+{
+name = n;
+color = c;
+age = h;
+}
+public virtual String move() 
+{
+return " I am moving";
+}
+public void Display() 
+{
+Console.WriteLine("My name is: {0}", name);
+Console.WriteLine("My color is: {0}", color);
+Console.WriteLine("My age is: {0}", age);
+Console.WriteLine("I move by: {0}", move());
+}
+}
+class Dog : Animal 
+{
+public Dog(String n, String c, int h) 
+: base(n, c, h)
+{ }
+public override String
+move()
+{
+return " I walk on four
+legs";
+}
+
+
+
+public void Display()
+{
+base.Display();
+}
+}
+
+
+
+class Bird : Animal
+{
+
+
+
+public Bird(String n, String
+c, int h)
+: base(n, c, h)
+{ }
+
+
+
+public override String
+move()
+{
+return " I fly on air";
+}
+
+
+
+public void Display()
+{
+base.Display();
+}
+}
+class Fish : Animal
+{
+
+
+
+public Fish(String n, String c, int
+h)
+: base(n, c, h)
+{ }
+
+
+
+public override String move()
+{
+return " I swim in water";
+}
+public void Display()
+{
+base.Display();
+}
+}
+class PrintAnimal 
+{
+static void Main(string[] args)
+{
+Dog d = new Dog("Billy", "brown", 2); 
+Bird e = new Bird("Eagle", "black", 5); 
+Fish f = new Fish("Tilapia", "gray", 7); 
+d.Display(); 
+Console.WriteLine("=======================================");
+Console.WriteLine(" ");
+e.Display();
+Console.WriteLine("=======================================");
+Console.WriteLine(" ");
+f.Display();
+Console.WriteLine("=======================================");
+Console.ReadLine();
+}
+}
+}
+
