@@ -1,0 +1,64 @@
+3. Employee Class (30 Marks)
+class Employee
+{
+    public int EmpNum { get; set; }
+    public string Name { get; set; }
+    public double Salary { get; set; }
+    
+    public void SaveToFile()
+    {
+        using (StreamWriter sw = new StreamWriter("employee.txt"))
+        {
+            sw.WriteLine($"{EmpNum}, {Name}, {Salary}");
+        }
+    }
+}
+4. Car Rental Application (30 Marks)
+class CarRental
+{
+    static void Main()
+    {
+        Dictionary<string, double> prices = new Dictionary<string, double>
+        {
+            {"compact", 19.95},
+            {"standard", 24.95},
+            {"luxury", 39.05}
+        };
+
+        Console.Write("Enter car type (compact, standard, luxury): ");
+        string carType = Console.ReadLine().ToLower();
+        
+        Console.Write("Enter number of days (1-7): ");
+        int days = int.Parse(Console.ReadLine());
+        
+        double total = prices[carType] * days;
+        Console.WriteLine($"Total Rental Charge: ${total}");
+    }
+}
+5. SalesTransactionDemo (30 Marks)
+class SalesTransaction
+{
+    public string Salesperson { get; set; }
+    public double SalesAmount { get; set; }
+    public double Commission { get; }
+    private const double CommissionRate = 200;
+
+    public SalesTransaction(string name, double sales)
+    {
+        Salesperson = name;
+        SalesAmount = sales;
+        Commission = sales * CommissionRate;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        SalesTransaction s1 = new SalesTransaction("Alice", 5);
+        SalesTransaction s2 = new SalesTransaction("Bob", 3);
+        
+        double totalSales = s1.SalesAmount + s2.SalesAmount;
+        Console.WriteLine($"Total Sales: {totalSales}");
+    }
+}
